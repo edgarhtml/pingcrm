@@ -7,7 +7,6 @@ use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\OrganizationsController;
 use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\UsersController;
-use App\Http\Controllers\PagosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -134,12 +133,6 @@ Route::put('contacts/{contact}/restore', [ContactsController::class, 'restore'])
 
 Route::get('reports', [ReportsController::class, 'index'])
     ->name('reports')
-    ->middleware('auth');
-
-// Pagos
-
-Route::get('pagos', [PagosController::class, 'index'])
-    ->name('pagos')
     ->middleware('auth');
 
 // Images
